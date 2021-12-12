@@ -2,20 +2,20 @@
 .features {
   padding-bottom: 0;
 }
-.features-title {
+.features__title {
   display: none;
 }
 
-.features-list {
+.features__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.features-item {
+.features__item {
   width: 270px;
 }
-.features-item-title {
+.features__item-title {
   /* margin-top: 0; */
   margin-bottom: 10px;
   font-weight: 700;
@@ -24,7 +24,7 @@
   text-transform: uppercase;
   color: $title-color;
 }
-.features-thumb {
+.features__thumb {
   display: flex;
   align-items: center;
   justify-content: center;
