@@ -1,5 +1,5 @@
 /* ------------------------------------------------Filters-------------------------------------------- */
-.filters-btn {
+.filters__btn {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -30,6 +30,6 @@
   justify-content: center;
   margin-bottom: 50px;
 }
-.filters-item:not(:last-child) {
+.filters__item:not(:last-child) {
   margin-right: 8px;
 }
