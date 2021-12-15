@@ -15,7 +15,7 @@
 
   text-align: center;
 }
-.order-service-title {
+.order-service__title {
   /* margin-top: 0; */
   margin-bottom: 30px;
   margin-left: auto;
@@ -30,7 +30,7 @@
   text-transform: uppercase;
   color: $main-title-color;
 }
-.order-service-btn {
+.order-service__btn {
   display: flex;
   align-items: center;
   text-align: center;
@@ -49,12 +49,10 @@
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: $itle-color;
-  background-color: $second-button-color;
-  /* cursor: pointer; */
-}
-
-.order-service-btn:active,
-.order-service-btn:focus {
   color: $main-title-color;
+  background-color: $second-button-color;
+  &:active,
+  &:focus {
+    color: $main-title-color;
+  }
 }

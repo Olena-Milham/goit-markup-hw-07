@@ -1,7 +1,6 @@
 /*--------------- MODAL WINDOW------------ */
 
 .backdrop {
-  /* display: flex; */
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
@@ -37,7 +36,7 @@
   transition: transform 250ms $timing-function;
 }
 
-.modal-close-btn {
+.modal__close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,10 +50,10 @@
   top: 8px;
   right: 8px;
   transition: fill 250ms $timing-function;
-}
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  fill: $main-accent-color;
+  &:hover,
+  &:focus {
+    fill: $main-accent-color;
+  }
 }
 
 /* ----------------------FORM------------------- */
@@ -65,37 +64,30 @@
   justify-content: center;
   margin-bottom: 0;
 }
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-color);
-  /* margin-top: 40px; */
-  /* margin-left: 39px; */
+  color: $title-color;
   margin-bottom: 12px;
-  /* margin-right: 41px; */
 }
-.modal-form {
+.modal__form {
   width: 448px;
-  /* outline: 1px solid blue; */
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* padding: 0; */
 }
-.form-field {
+.form__field {
   display: flex;
   flex-direction: column;
-  /* outline: 1px solid green; */
   margin-bottom: 10px;
   position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
-.form-field:last-child {
-  margin-bottom: 0;
-}
+
 /* --------reset the styles --------- */
-.form-field input {
+.form__field input {
   margin: 0;
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -103,9 +95,8 @@
   background-color: transparent;
   transition: border-color 250ms $timing-function;
 }
-/* outline: none; */
 
-.form-field label {
+.form__field label {
   margin-bottom: 4px;
   color: #757575;
   font-weight: normal;
@@ -113,39 +104,38 @@
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
-.modal-form-input-icon {
+.modal-form__input-icon {
   display: inline-block;
   width: 18px;
   height: 18px;
-  /* margin: 11px 12px; */
+
   background-color: transparent;
 
   position: absolute;
-  /* top: 40px; */
+
   top: 50%;
   left: 12px;
 
-  /* outline: 1px solid tomato; */
   transition: fill 250ms $timing-function;
 }
 
 /* ~ choses all the neighbours below with the tag or selector; + the next neighbour */
 
-.modal-form-input:hover ~ .modal-form-input-icon,
-.modal-form-input:focus ~ .modal-form-input-icon {
+.modal-form__input:hover ~ .modal-form__input-icon,
+.modal-form__input:focus ~ .modal-form__input-icon {
   fill: $main-accent-color;
 }
 
 /* when form-field is focused apply styles to child: .modal-form-input-icon*/
-.form-field:focus-within > .modal-form-input-icon {
+.form__field:focus-within > .modal-form__input-icon {
   fill: $main-accent-color;
 }
-.form-field:focus-within > .modal-form-input {
+.form__field:focus-within > .modal-form__input {
   border: 1px solid $main-accent-color;
   outline: none;
 }
 
-.form-field textarea::placeholder {
+.form__field textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 textarea {
@@ -155,17 +145,16 @@ textarea {
   width: 448px;
   min-height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  /* margin-bottom: 0; */
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms $timing-function;
 }
 
-.modal-form-input:hover,
-.modal-form-input:focus {
+.modal-form__input:hover,
+.modal-form__input:focus {
   border-color: $main-accent-color;
 }
 
 /* ---------------------custom checkbox-------------------- */
-.form-checkbox {
+.form__checkbox {
   /* outline: 1px solid teal; */
   display: flex;
   width: 425px;
@@ -174,7 +163,7 @@ textarea {
   margin: 20px 11px 30px 14px;
 }
 
-.form-checkbox-input {
+.form__checkbox-input {
   /* -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; */
@@ -188,7 +177,7 @@ textarea {
   overflow: hidden;
 }
 
-.form-checkbox-icon {
+.form__checkbox-icon {
   display: block;
   width: 16px;
   height: 15px;
@@ -198,7 +187,7 @@ textarea {
   margin-right: 7px;
 }
 
-.form-checkbox-input:checked + .form-checkbox-icon {
+.form__checkbox-input:checked + .form__checkbox-icon {
   background-color: $second-button-color;
   background-image: url(../images/decore/checked.svg);
   background-repeat: no-repeat;
@@ -207,7 +196,7 @@ textarea {
   border: 1px solid $second-button-color;
 }
 
-.form-checkbox-text {
+.form__checkbox-text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,7 +208,7 @@ textarea {
 
   color: $main-text-color;
 }
-.form-checkbox-link {
+.form__checkbox-link {
   text-decoration: underline;
   color: $main-accent-color;
   font-size: 14px;
@@ -229,13 +218,13 @@ textarea {
 }
 
 /* Button */
-.modal-form-btn {
+.modal-form__btn {
   display: flex;
   align-items: center;
   justify-content: center;
   /* margin-bottom: 40px; */
 }
-.form-send-btn {
+.form-send__btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,8 +248,8 @@ textarea {
 
   margin-left: 12px;
   background-color: $second-button-color;
-}
-.form-send-btn:focus,
-.form-send-btn:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:focus,
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
