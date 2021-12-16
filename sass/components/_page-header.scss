@@ -2,6 +2,9 @@
 .header {
   background-color: $header-color;
   border-bottom: 1px solid #ececec;
+  max-width: 1600px;
+  height: 80px;
+  margin: 0 auto;
 }
 
 .nav-holder {

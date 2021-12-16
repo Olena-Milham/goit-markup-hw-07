@@ -339,6 +339,9 @@ img {
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
+  max-width: 1600px;
+  height: 80px;
+  margin: 0 auto;
 }
 
 .nav-holder {
@@ -536,8 +539,8 @@ img {
 }
 
 .projects__item {
-  -ms-flex-preferred-size: calc(100% / 3 - $project-item-gap);
-      flex-basis: calc(100% / 3 - $project-item-gap);
+  -ms-flex-preferred-size: calc(100% / 3 - 30px);
+      flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
   outline: 1px solid #eeeeee;
@@ -549,7 +552,11 @@ img {
   /* overflow: hidden; */
   /* при ховере на projects-item примени на ..description эти стили */
 }
-.projects__item:hover, .projects__item:focus {
+.projects__item:hover {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.projects__item:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

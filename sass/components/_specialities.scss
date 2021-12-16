@@ -3,12 +3,12 @@
 .specialities__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * 30px);
-  margin-top: calc(-1 * 30px);
+  margin-left: calc(-1 * #{$project-item-gap});
+  margin-top: calc(-1 * #{$project-item-gap});
 }
 
 .specialities__item {
-  flex-basis: calc((100% / 3) - $project-item-gap);
+  flex-basis: calc((100% / 3) - #{$project-item-gap});
   margin-left: $project-item-gap;
   margin-top: $project-item-gap;
   position: relative;
